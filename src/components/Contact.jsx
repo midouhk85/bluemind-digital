@@ -37,9 +37,9 @@ const Contact = () => {
     };
 
     const socialLinks = [
-        { Icon: Linkedin, href: 'https://www.linkedin.com/company/bluemind-digital', label: 'LinkedIn' },
-        { Icon: Instagram, href: 'https://www.instagram.com/bluemind.digital', label: 'Instagram' },
-        { Icon: Facebook, href: 'https://www.facebook.com/blueminddigital', label: 'Facebook' }
+        { Icon: Linkedin, href: 'https://www.linkedin.com/in/mohamed-benyelles-6764041a0/', label: 'LinkedIn' },
+        { Icon: Instagram, href: null, label: 'Instagram' },
+        { Icon: Facebook, href: null, label: 'Facebook' }
     ];
 
     return (
@@ -97,18 +97,30 @@ const Contact = () => {
                         </div>
 
                         <div className="mt-12 flex gap-4 relative z-20">
-                            {socialLinks.map(({ Icon, href, label }, index) => (
-                                <a
-                                    key={index}
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={label}
-                                    className="p-3 bg-white/5 rounded-full hover:bg-accent hover:text-white transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] cursor-pointer"
-                                >
-                                    <Icon className="w-5 h-5" />
-                                </a>
-                            ))}
+                            {socialLinks.map(({ Icon, href, label }, index) => {
+                                const CommonClasses = "p-3 bg-white/5 rounded-full transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] flex items-center justify-center";
+
+                                return href ? (
+                                    <a
+                                        key={index}
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={label}
+                                        className={`${CommonClasses} hover:bg-accent hover:text-white cursor-pointer`}
+                                    >
+                                        <Icon className="w-5 h-5" />
+                                    </a>
+                                ) : (
+                                    <div
+                                        key={index}
+                                        aria-label={label}
+                                        className={`${CommonClasses} text-textGray opacity-50 cursor-default`}
+                                    >
+                                        <Icon className="w-5 h-5" />
+                                    </div>
+                                );
+                            })}
                         </div>
                     </motion.div>
 
