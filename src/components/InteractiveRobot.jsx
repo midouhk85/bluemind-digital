@@ -45,13 +45,13 @@ const InteractiveRobot = () => {
 
     // Calcul des mouvements
     const headRotation = {
-        x: mousePosition.y * 10, // Rotation X basée sur Y souris
-        y: mousePosition.x * 10  // Rotation Y basée sur X souris
+        x: Math.min(0, mousePosition.y * 10), // Rotation X basée sur Y souris (seulement vers le haut)
+        y: mousePosition.x * 10  // Rotation Y basée sur X souris (gauche-droite)
     };
 
     const eyeMovement = {
-        x: mousePosition.x * 10, // Déplacement max 10px
-        y: mousePosition.y * 8
+        x: mousePosition.x * 10, // Déplacement horizontal max 10px
+        y: Math.min(0, mousePosition.y * 8) // Déplacement vertical uniquement vers le haut
     };
 
     return (
