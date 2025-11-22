@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import robotLogo from '../assets/robot-logo.png';
+import InteractiveRobot from './InteractiveRobot';
 
 const Hero = () => {
     return (
@@ -26,7 +26,7 @@ const Hero = () => {
                 >
                     <div className="relative">
                         <div className="absolute inset-0 bg-accent blur-2xl opacity-30 rounded-full" />
-                        <img src={robotLogo} alt="BlueMind Robot" className="w-48 h-48 relative z-10 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]" />
+                        <InteractiveRobot />
                     </div>
                 </motion.div>
 
