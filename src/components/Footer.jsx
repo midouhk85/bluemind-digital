@@ -34,9 +34,9 @@ const Footer = () => {
     ];
 
     const socialLinks = [
-        { icon: Linkedin, href: "#", label: "LinkedIn" },
-        { icon: Instagram, href: "#", label: "Instagram" },
-        { icon: Facebook, href: "#", label: "Facebook" }
+        { icon: Linkedin, href: "https://www.linkedin.com/company/bluemind-digital", label: "LinkedIn" },
+        { icon: Instagram, href: "https://www.instagram.com/bluemind.digital", label: "Instagram" },
+        { icon: Facebook, href: "https://www.facebook.com/blueminddigital", label: "Facebook" }
     ];
 
     return (
@@ -73,6 +73,8 @@ const Footer = () => {
                                 <a
                                     key={index}
                                     href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     aria-label={social.label}
                                     className="p-3 bg-white/5 rounded-full hover:bg-accent hover:text-white transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] text-textGray"
                                 >

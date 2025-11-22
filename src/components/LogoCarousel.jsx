@@ -75,7 +75,7 @@ const logos = [
 
 const LogoCarousel = () => {
     return (
-        <div className="w-full py-12 overflow-hidden bg-deepBlue/50 border-y border-white/5">
+        <div className="w-full py-12 overflow-hidden bg-deepBlue/50">
             <div className="container mx-auto px-6 mb-8 text-center">
                 <p className="text-textGray text-sm uppercase tracking-widest">Ils nous font confiance & Outils maîtrisés</p>
             </div>

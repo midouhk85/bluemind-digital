@@ -22,7 +22,7 @@ const values = [
 
 const About = () => {
     return (
-        <section className="py-24 bg-deepBlue relative overflow-hidden">
+        <section id="about" className="py-24 bg-deepBlue relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-accent/5 to-transparent" />
 

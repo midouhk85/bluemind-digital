@@ -4,7 +4,7 @@ import { ArrowRight, Cpu } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
+        <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden bg-primary pt-24 pb-8">
             {/* Dynamic Background */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.15),transparent_50%)]" />
@@ -57,13 +57,13 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
-                    <button className="px-8 py-4 bg-gradient-to-r from-accent to-accentBlue hover:from-accentBlue hover:to-accent text-white font-bold rounded-full transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] flex items-center justify-center gap-2">
+                    <a href="#services" className="px-8 py-4 bg-gradient-to-r from-accent to-accentBlue hover:from-accentBlue hover:to-accent text-white font-bold rounded-full transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] flex items-center justify-center gap-2">
                         Découvrir nos services
                         <ArrowRight className="w-5 h-5" />
-                    </button>
-                    <button className="px-8 py-4 border border-white/10 hover:bg-white/5 text-textLight rounded-full transition-all backdrop-blur-sm">
+                    </a>
+                    <a href="#contact" className="px-8 py-4 border border-white/10 hover:bg-white/5 text-textLight rounded-full transition-all backdrop-blur-sm text-center">
                         Nous contacter
-                    </button>
+                    </a>
                 </motion.div>
             </div>
         </section>
