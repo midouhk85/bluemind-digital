@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Cpu } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import robotLogo from '../assets/robot-logo.png';
 
 const Hero = () => {
     return (
@@ -25,7 +26,7 @@ const Hero = () => {
                 >
                     <div className="relative">
                         <div className="absolute inset-0 bg-accent blur-2xl opacity-30 rounded-full" />
-                        <Cpu className="w-24 h-24 text-accent relative z-10 drop-shadow-[0_0_15px_rgba(139,92,246,0.5)]" />
+                        <img src={robotLogo} alt="BlueMind Robot" className="w-48 h-48 relative z-10 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]" />
                     </div>
                 </motion.div>
 
@@ -57,11 +58,11 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
-                    <a href="#services" className="px-8 py-4 bg-gradient-to-r from-accent to-accentBlue hover:from-accentBlue hover:to-accent text-white font-bold rounded-full transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] flex items-center justify-center gap-2">
+                    <a href="#services" className="px-8 py-4 bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-accent/30 hover:border-accent text-white font-bold rounded-full transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(96,253,252,0.5)] flex items-center justify-center gap-2 font-display">
                         Découvrir nos services
                         <ArrowRight className="w-5 h-5" />
                     </a>
-                    <a href="#contact" className="px-8 py-4 border border-white/10 hover:bg-white/5 text-textLight rounded-full transition-all backdrop-blur-sm text-center">
+                    <a href="#contact" className="px-8 py-4 border border-white/10 hover:bg-white/5 text-textLight rounded-full transition-all backdrop-blur-sm text-center font-body">
                         Nous contacter
                     </a>
                 </motion.div>

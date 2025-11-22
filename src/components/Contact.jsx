@@ -9,8 +9,6 @@ const Contact = () => {
         email: '',
         message: ''
     });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState(null);
 
     const handleChange = (e) => {
         setFormData({
@@ -21,32 +19,21 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsSubmitting(true);
-        setSubmitStatus(null);
 
-        // Simulate form submission (replace with actual API call)
-        try {
-            // For demonstration, we'll just simulate a delay
-            await new Promise(resolve => setTimeout(resolve, 1500));
+        // Construire le message WhatsApp
+        const whatsappNumber = '213540035753'; // Numéro sans le +
+        const message = `*Nouvelle demande de contact*%0A%0A` +
+            `*Nom:* ${formData.name}%0A` +
+            `*Entreprise:* ${formData.company || 'Non renseignée'}%0A` +
+            `*Email:* ${formData.email}%0A%0A` +
+            `*Message:*%0A${formData.message}`;
 
-            // In production, replace this with your actual form submission logic
-            // const response = await fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(formData)
-            // });
+        // Ouvrir WhatsApp avec le message pré-rempli
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+        window.open(whatsappUrl, '_blank');
 
-            setSubmitStatus('success');
-            setFormData({ name: '', company: '', email: '', message: '' });
-
-            // Reset success message after 5 seconds
-            setTimeout(() => setSubmitStatus(null), 5000);
-        } catch (error) {
-            setSubmitStatus('error');
-            setTimeout(() => setSubmitStatus(null), 5000);
-        } finally {
-            setIsSubmitting(false);
-        }
+        // Réinitialiser le formulaire après ouverture WhatsApp
+        setFormData({ name: '', company: '', email: '', message: '' });
     };
 
     const socialLinks = [
@@ -185,23 +172,11 @@ const Contact = () => {
                                 ></textarea>
                             </div>
 
-                            {submitStatus && (
-                                <div className={`p-4 rounded-lg text-center ${submitStatus === 'success'
-                                        ? 'bg-green-500/20 border border-green-500/30 text-green-300'
-                                        : 'bg-red-500/20 border border-red-500/30 text-red-300'
-                                    }`}>
-                                    {submitStatus === 'success'
-                                        ? '✓ Message envoyé avec succès !'
-                                        : '✗ Erreur lors de l\'envoi. Réessayez.'}
-                                </div>
-                            )}
-
                             <button
                                 type="submit"
-                                disabled={isSubmitting}
-                                className="w-full bg-gradient-to-r from-accent to-accentBlue hover:from-accentBlue hover:to-accent text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg hover:shadow-accent/25 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="w-full bg-black/70 hover:bg-black/90 backdrop-blur-sm border border-accent/30 hover:border-accent text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg hover:shadow-accent/25 font-display"
                             >
-                                {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                                Envoyer le message
                                 <Send className="w-5 h-5" />
                             </button>
                         </form>

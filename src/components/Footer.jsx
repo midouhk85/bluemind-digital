@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Heart } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Heart } from 'lucide-react';
+import robotLogo from '../assets/robot-logo.png';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -58,8 +59,8 @@ const Footer = () => {
                     >
                         <div className="flex items-center gap-3 mb-4 group cursor-pointer">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-accent blur-md opacity-30 rounded-full group-hover:opacity-50 transition-opacity" />
-                                <Cpu className="w-8 h-8 text-accent relative z-10 drop-shadow-[0_0_8px_rgba(139,92,246,0.5)]" />
+                                <div className="absolute inset-0 bg-accent blur-md opacity-30 group-hover:opacity-50 transition-opacity" />
+                                <img src={robotLogo} alt="BlueMind Robot" className="w-8 h-8 relative z-10 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
                             </div>
                             <span className="text-xl font-bold text-white tracking-tight">
                                 BlueMind Digital

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, Lightbulb } from 'lucide-react';
+import bluemindFullLogo from '../assets/bluemind-full-logo.png';
 
 const values = [
     {
@@ -46,11 +47,18 @@ const About = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {values.map((value, index) => (
-                                <div key={index} className="p-4 bg-secondary/30 rounded-xl border border-white/5">
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    className="p-4 bg-secondary/30 rounded-xl border border-white/5 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1"
+                                >
                                     <div className="text-accent mb-3">{value.icon}</div>
-                                    <h3 className="font-bold mb-2">{value.title}</h3>
-                                    <p className="text-sm text-textGray">{value.description}</p>
-                                </div>
+                                    <h3 className="font-bold mb-2 font-display">{value.title}</h3>
+                                    <p className="text-sm text-textGray font-body">{value.description}</p>
+                                </motion.div>
                             ))}
                         </div>
                     </motion.div>
@@ -64,14 +72,14 @@ const About = () => {
                     >
                         <div className="aspect-square rounded-2xl overflow-hidden bg-secondary/50 relative group">
                             <div className="absolute inset-0 bg-gradient-to-tr from-deepBlue/80 to-transparent z-10" />
-                            {/* Placeholder for Team Image */}
-                            <div className="absolute inset-0 flex items-center justify-center bg-secondary">
-                                <Users className="w-24 h-24 text-white/20" />
+                            {/* BlueMind Full Logo */}
+                            <div className="absolute inset-0 flex items-center justify-center bg-secondary p-12">
+                                <img src={bluemindFullLogo} alt="BlueMind Digital Team" className="w-full h-auto object-contain" />
                             </div>
 
                             <div className="absolute bottom-0 left-0 p-8 z-20">
-                                <h3 className="text-2xl font-bold text-white mb-2">L'Équipe BlueMind</h3>
-                                <p className="text-accent">Experts en IA & Digital</p>
+                                <h3 className="text-2xl font-bold text-white mb-2 font-display">L'Équipe BlueMind</h3>
+                                <p className="text-accent font-body">Experts en IA & Digital</p>
                             </div>
                         </div>
 

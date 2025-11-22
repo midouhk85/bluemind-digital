@@ -4,9 +4,9 @@ import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import n8nLogo from '../assets/n8n-logo.png';
 import makeLogo from '../assets/make-logo.png';
 
-const MaskedIcon = ({ src }) => (
+const MaskedIcon = ({ src, size = "w-12 h-12" }) => (
     <div
-        className="w-8 h-8 bg-current"
+        className={`${size} bg-current`}
         style={{
             maskImage: `url(${src})`,
             WebkitMaskImage: `url(${src})`,
@@ -56,11 +56,11 @@ const logos = [
     },
     {
         name: "n8n",
-        icon: <MaskedIcon src={n8nLogo} />
+        icon: <MaskedIcon src={n8nLogo} size="w-12 h-12" />
     },
     {
         name: "Make",
-        icon: <MaskedIcon src={makeLogo} />
+        icon: <MaskedIcon src={makeLogo} size="w-12 h-12" />
     },
     {
         name: "Zapier",
@@ -87,7 +87,7 @@ const LogoCarousel = () => {
                             key={index}
                             className="mx-8 flex flex-col items-center justify-center gap-3 opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer group/item"
                         >
-                            <div className="text-white group-hover/item:text-accent transition-colors duration-300">
+                            <div className="text-white group-hover/item:text-accent transition-colors duration-300 h-12 flex items-center justify-center">
                                 {logo.icon}
                             </div>
                             <span className="text-xs font-medium text-textGray group-hover/item:text-white transition-colors duration-300">
@@ -103,7 +103,7 @@ const LogoCarousel = () => {
                             key={`clone-${index}`}
                             className="mx-8 flex flex-col items-center justify-center gap-3 opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer group/item"
                         >
-                            <div className="text-white group-hover/item:text-accent transition-colors duration-300">
+                            <div className="text-white group-hover/item:text-accent transition-colors duration-300 h-12 flex items-center justify-center">
                                 {logo.icon}
                             </div>
                             <span className="text-xs font-medium text-textGray group-hover/item:text-white transition-colors duration-300">

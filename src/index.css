@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-sans: 'Montserrat', 'Inter', system-ui, sans-serif;
+  --font-display: 'Oswald', system-ui, sans-serif;
 
   /* SmartCloud Palette */
   --color-primary: #0B0415;
   /* Deep Violet Background */
   --color-secondary: #1A1033;
   /* Lighter Violet for sections */
-  --color-accent: #8B5CF6;
-  /* Electric Purple */
-  --color-accentGlow: #FACC15;
-  /* Bright Yellow */
-  --color-accentBlue: #3B82F6;
-  /* Neon Blue */
+  --color-accent: #60fdfc;
+  /* Cyan Accent */
+  --color-accentGlow: #60fdfc;
+  /* Cyan Glow */
+  --color-accentBlue: #60fdfc;
+  /* Cyan Blue */
 
   --color-deepBlue: #0B0415;
   /* Keeping variable name for compatibility but updating color */
@@ -49,5 +50,13 @@
 @layer utilities {
   .text-glow {
     text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-sans);
   }
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import robotLogo from '../assets/robot-logo.png';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -29,16 +30,16 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className={`fixed top-0 left-0 w-full z-50 px-6 py-4 transition-all duration-300 ${isScrolled
-                    ? 'bg-primary/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-accent/5'
-                    : 'bg-transparent'
+                ? 'bg-primary/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-accent/5'
+                : 'bg-transparent'
                 }`}
         >
             <div className="container mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-3 group">
                     <div className="relative">
-                        <div className="absolute inset-0 bg-accent blur-md opacity-30 rounded-full group-hover:opacity-50 transition-opacity" />
-                        <Cpu className="w-8 h-8 text-accent relative z-10 drop-shadow-[0_0_8px_rgba(139,92,246,0.5)]" />
+                        <div className="absolute inset-0 bg-accent blur-md opacity-30 group-hover:opacity-50 transition-opacity" />
+                        <img src={robotLogo} alt="BlueMind Robot" className="w-8 h-8 relative z-10 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
                     </div>
                     <span className="text-xl font-bold text-white tracking-tight group-hover:text-accent transition-colors">
                         BlueMind Digital
@@ -57,12 +58,6 @@ const Header = () => {
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
                         </a>
                     ))}
-                    <a
-                        href="#contact"
-                        className="px-6 py-2.5 bg-gradient-to-r from-accent to-accentBlue hover:from-accentBlue hover:to-accent text-white font-medium rounded-full transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] text-sm"
-                    >
-                        Démarrer
-                    </a>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -98,13 +93,6 @@ const Header = () => {
                                 {link.name}
                             </a>
                         ))}
-                        <a
-                            href="#contact"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="px-6 py-3 bg-gradient-to-r from-accent to-accentBlue text-white font-medium rounded-full text-center text-sm mt-2"
-                        >
-                            Démarrer
-                        </a>
                     </nav>
                 </motion.div>
             )}
