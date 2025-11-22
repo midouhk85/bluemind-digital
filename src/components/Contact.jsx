@@ -59,7 +59,7 @@ const Contact = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <span className="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">Contactez-nous</span>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">Parlons de votre projet</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display">Parlons de votre projet</h2>
                         <p className="text-textGray text-lg mb-12">
                             Prêt à transformer votre entreprise ? Notre équipe est là pour vous accompagner.
                         </p>

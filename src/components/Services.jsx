@@ -42,7 +42,7 @@ const Services = () => {
                     className="text-center mb-16"
                 >
                     <LogoCarousel />
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">Nos Expertises</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 font-display">Nos Expertises</h2>
                     <p className="text-textGray max-w-2xl mx-auto">
                         Des solutions technologiques de pointe pour propulser votre croissance.
                     </p>

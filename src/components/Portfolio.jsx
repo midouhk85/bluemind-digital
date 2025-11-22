@@ -18,7 +18,7 @@ const Portfolio = () => {
                     className="text-center mb-16"
                 >
                     <span className="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">Confiance & Excellence</span>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6">6 ans d'expertise</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display">6 ans d'expertise</h2>
                     <p className="text-textGray max-w-2xl mx-auto">
                         Ils nous font confiance pour leur transformation digitale.
                     </p>

@@ -35,7 +35,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+                    className="text-5xl md:text-7xl font-bold mb-6 tracking-tight font-display"
                 >
                     <span className="block text-textLight mb-2">Automatisez aujourd’hui.</span>
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-accentBlue to-accentGlow">

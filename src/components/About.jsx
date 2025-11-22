@@ -35,7 +35,7 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display">
                             Notre Histoire
                         </h2>
                         <p className="text-textGray text-lg mb-6 leading-relaxed">
@@ -73,8 +73,8 @@ const About = () => {
                         <div className="aspect-square rounded-2xl overflow-hidden bg-secondary/50 relative group">
                             <div className="absolute inset-0 bg-gradient-to-tr from-deepBlue/80 to-transparent z-10" />
                             {/* BlueMind Full Logo */}
-                            <div className="absolute inset-0 flex items-center justify-center bg-secondary p-12">
-                                <img src={bluemindFullLogo} alt="BlueMind Digital Team" className="w-full h-auto object-contain" />
+                            <div className="absolute inset-0 flex items-center justify-center bg-secondary p-8 md:p-12 pb-32 md:pb-32">
+                                <img src={bluemindFullLogo} alt="BlueMind Digital Team" className="w-full h-full object-contain" />
                             </div>
 
                             <div className="absolute bottom-0 left-0 p-8 z-20">
