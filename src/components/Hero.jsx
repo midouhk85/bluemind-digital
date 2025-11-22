@@ -2,12 +2,26 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import InteractiveRobot from './InteractiveRobot';
+import heroBackground from '../assets/hero-background.png';
 
 const Hero = () => {
     return (
         <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden bg-primary pt-24 pb-8">
             {/* Dynamic Background */}
             <div className="absolute inset-0 overflow-hidden">
+                {/* Generated Background Image */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center opacity-40 animate-float-wave"
+                    style={{
+                        backgroundImage: `url(${heroBackground})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                    }}
+                />
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/50 to-primary" />
+
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.15),transparent_50%)]" />
                 <div className="absolute w-96 h-96 bg-accent/20 rounded-full blur-3xl -top-20 -left-20 animate-pulse-slow" />
                 <div className="absolute w-96 h-96 bg-accentBlue/20 rounded-full blur-3xl -bottom-20 -right-20 animate-pulse-slow delay-1000" />

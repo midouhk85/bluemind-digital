@@ -60,18 +60,21 @@ const Header = () => {
                     ))}
                 </nav>
 
-                {/* Mobile Menu Button */}
-                <button
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    className="md:hidden p-2 text-white hover:text-accent transition-colors"
-                    aria-label="Toggle menu"
-                >
-                    {isMobileMenuOpen ? (
-                        <X className="w-6 h-6" />
-                    ) : (
-                        <Menu className="w-6 h-6" />
-                    )}
-                </button>
+                {/* Mobile Controls */}
+                <div className="md:hidden flex items-center gap-3">
+                    {/* Mobile Menu Button */}
+                    <button
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className="p-2 text-white hover:text-accent transition-colors"
+                        aria-label="Toggle menu"
+                    >
+                        {isMobileMenuOpen ? (
+                            <X className="w-6 h-6" />
+                        ) : (
+                            <Menu className="w-6 h-6" />
+                        )}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}
