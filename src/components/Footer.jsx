@@ -69,7 +69,7 @@ const Footer = () => {
                         <p className="text-textGray text-sm leading-relaxed mb-6 max-w-md">
                             Transformez votre entreprise grâce à l'intelligence artificielle et des solutions digitales sur mesure. Innovation, expertise et résultats.
                         </p>
-                        <div className="flex gap-3">
+                        <div className="flex gap-3 relative z-20">
                             {socialLinks.map((social, index) => (
                                 <a
                                     key={index}
@@ -77,7 +77,7 @@ const Footer = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={social.label}
-                                    className="p-3 bg-white/5 rounded-full hover:bg-accent hover:text-white transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] text-textGray"
+                                    className="p-3 bg-white/5 rounded-full hover:bg-accent hover:text-white transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] text-textGray cursor-pointer"
                                 >
                                     <social.icon className="w-4 h-4" />
                                 </a>

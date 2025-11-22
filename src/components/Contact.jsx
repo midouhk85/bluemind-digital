@@ -96,7 +96,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="mt-12 flex gap-4">
+                        <div className="mt-12 flex gap-4 relative z-20">
                             {socialLinks.map(({ Icon, href, label }, index) => (
                                 <a
                                     key={index}
@@ -104,7 +104,7 @@ const Contact = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={label}
-                                    className="p-3 bg-white/5 rounded-full hover:bg-accent hover:text-white transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.4)]"
+                                    className="p-3 bg-white/5 rounded-full hover:bg-accent hover:text-white transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_0_15px_rgba(139,92,246,0.4)] cursor-pointer"
                                 >
                                     <Icon className="w-5 h-5" />
                                 </a>
