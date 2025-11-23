@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Globe, BarChart3, Code2, BrainCircuit } from 'lucide-react';
 import LogoCarousel from './LogoCarousel';
@@ -30,6 +30,62 @@ const services = [
     }
 ];
 
+const ServiceCard = ({ service, index }) => {
+    const [rotateX, setRotateX] = useState(0);
+    const [rotateY, setRotateY] = useState(0);
+
+    const handleMouseMove = (e) => {
+        const card = e.currentTarget;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotX = -(y - centerY) / 10;
+        const rotY = (x - centerX) / 10;
+
+        setRotateX(rotX);
+        setRotateY(rotY);
+    };
+
+    const handleMouseLeave = () => {
+        setRotateX(0);
+        setRotateY(0);
+    };
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{
+                transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+                transition: 'transform 0.2s ease-out'
+            }}
+            className="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-accent/50 transition-all duration-300 hover:scale-105 overflow-hidden"
+        >
+            <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+
+            <div className="relative z-10">
+                <div className="mb-6 p-3 bg-white/5 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 text-accent shadow-[0_0_15px_rgba(139,92,246,0.2)] group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]">
+                    {service.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
+                    {service.title}
+                </h3>
+                <p className="text-textGray text-sm leading-relaxed group-hover:text-white/80 transition-colors">
+                    {service.description}
+                </p>
+            </div>
+        </motion.div>
+    );
+};
+
 const Services = () => {
     return (
         <section id="services" className="py-8 bg-primary relative overflow-hidden">
@@ -50,28 +106,7 @@ const Services = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {services.map((service, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
-                        >
-                            <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-
-                            <div className="relative z-10">
-                                <div className="mb-6 p-3 bg-white/5 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 text-accent shadow-[0_0_15px_rgba(139,92,246,0.2)] group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]">
-                                    {service.icon}
-                                </div>
-                                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
-                                    {service.title}
-                                </h3>
-                                <p className="text-textGray text-sm leading-relaxed group-hover:text-white/80 transition-colors">
-                                    {service.description}
-                                </p>
-                            </div>
-                        </motion.div>
+                        <ServiceCard key={index} service={service} index={index} />
                     ))}
                 </div>
             </div>

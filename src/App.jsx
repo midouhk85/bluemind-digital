@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
 import WhatsAppButton from './components/WhatsAppButton';
+import ScrollProgressBar from './components/ScrollProgressBar';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,7 @@ function App() {
 
       {!isLoading && (
         <>
+          <ScrollProgressBar />
           <Header />
           <Hero />
           <Services />
