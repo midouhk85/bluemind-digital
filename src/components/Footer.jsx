@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Heart } from 'lucide-react';
-import robotLogo from '../assets/robot-logo.png';
+import robotLogo from '../assets/robot-logo-eyes.png';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();

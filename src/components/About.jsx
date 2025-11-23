@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, Lightbulb } from 'lucide-react';
-import bluemindFullLogo from '../assets/bluemind-full-logo.png';
+import bluemindFullLogo from '../assets/bluemind-full-logo-new.png';
 
 const values = [
     {

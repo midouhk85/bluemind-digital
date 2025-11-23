@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import robotLogo from '../assets/robot-logo.png';
+import robotLogo from '../assets/robot-logo-eyes.png';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
