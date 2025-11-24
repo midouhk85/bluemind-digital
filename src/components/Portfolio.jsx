@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import clientLogos from '/client-logos.png';
 
 const Portfolio = () => {
     return (
@@ -32,7 +33,7 @@ const Portfolio = () => {
                     className="flex justify-center"
                 >
                     <img
-                        src="/client-logos.png"
+                        src={clientLogos}
                         alt="Nos clients : Ooredoo, Oppo, Aigle, Zara, Pepsi, Renault, LG, et autres..."
                         className="w-full max-w-7xl h-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-500"
                     />
