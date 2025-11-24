@@ -35,14 +35,14 @@ const Hero = () => {
                 {/* Particles */}
                 <ParticlesBackground />
 
-                {/* Hero Illustration - Right side with fade effect */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full hidden lg:block pointer-events-none">
+                {/* Hero Illustration - Visible on all screens with responsive positioning */}
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full md:w-3/4 lg:w-1/2 h-full pointer-events-none">
                     <div
-                        className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-95"
+                        className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-30 md:opacity-60 lg:opacity-95"
                         style={{
                             backgroundImage: `url(${heroIllustration})`,
-                            maskImage: 'radial-gradient(ellipse 75% 65% at 60% 50%, rgba(0,0,0,1) 25%, rgba(0,0,0,0.8) 45%, rgba(0,0,0,0.3) 65%, transparent 80%)',
-                            WebkitMaskImage: 'radial-gradient(ellipse 75% 65% at 60% 50%, rgba(0,0,0,1) 25%, rgba(0,0,0,0.8) 45%, rgba(0,0,0,0.3) 65%, transparent 80%)',
+                            maskImage: 'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 15%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.2) 55%, transparent 75%)',
+                            WebkitMaskImage: 'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 15%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.2) 55%, transparent 75%)',
                         }}
                     />
                 </div>
@@ -57,7 +57,7 @@ const Hero = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="text-5xl md:text-7xl font-bold mb-6 tracking-tight font-display"
+                            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight font-display"
                         >
                             <span className="block text-textLight mb-2">Automatisez aujourd'hui.</span>
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-accentBlue to-accentGlow">
@@ -76,7 +76,7 @@ const Hero = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="text-xl text-textGray mb-10 max-w-xl"
+                            className="text-lg md:text-xl text-textGray mb-8 md:mb-10 max-w-xl"
                         >
                             BlueMind Digital transforme votre entreprise grâce à l'intelligence artificielle et des solutions digitales sur mesure.
                         </motion.p>
