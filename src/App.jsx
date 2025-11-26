@@ -3,11 +3,13 @@ import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Process from './components/Process';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
+import Chatbot from './components/Chatbot';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollProgressBar from './components/ScrollProgressBar';
 
@@ -34,11 +36,13 @@ function App() {
           <Header />
           <Hero />
           <Services />
+          <Process />
           <Portfolio />
           <About />
           <Contact />
           <Footer />
           <WhatsAppButton />
+          <Chatbot />
         </>
       )}
     </div>

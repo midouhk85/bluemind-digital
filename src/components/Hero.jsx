@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import heroBackground from '../assets/hero-background.png';
@@ -6,8 +6,11 @@ import heroIllustration from '../assets/hero-illustration.png';
 import ParticlesBackground from './ParticlesBackground';
 import TypingAnimation from './TypingAnimation';
 import MagneticButton from './MagneticButton';
+import BookingModal from './BookingModal';
 
 const Hero = () => {
+    const [isBookingOpen, setIsBookingOpen] = useState(false);
+
     return (
         <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden bg-primary pt-24 pb-8">
             {/* Dynamic Background */}
@@ -88,10 +91,13 @@ const Hero = () => {
                             className="flex flex-col sm:flex-row gap-4 items-start"
                         >
                             <MagneticButton className="w-full sm:w-auto flex">
-                                <a href="#services" className="w-full px-8 py-4 bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-accent/30 hover:border-accent text-accent rounded-full transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(96,253,252,0.5)] flex items-center justify-center gap-2 font-display">
-                                    Découvrir nos services
+                                <button
+                                    onClick={() => setIsBookingOpen(true)}
+                                    className="w-full px-8 py-4 bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-accent/30 hover:border-accent text-accent rounded-full transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(96,253,252,0.5)] flex items-center justify-center gap-2 font-display"
+                                >
+                                    Réserver un audit
                                     <ArrowRight className="w-5 h-5" />
-                                </a>
+                                </button>
                             </MagneticButton>
                             <MagneticButton className="w-full sm:w-auto flex">
                                 <a href="#contact" className="w-full px-8 py-4 border border-white/10 hover:bg-white/5 text-textLight rounded-full transition-all backdrop-blur-sm text-center font-body">
@@ -105,6 +111,8 @@ const Hero = () => {
                     <div className="hidden lg:block"></div>
                 </div>
             </div>
+
+            <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
         </section>
     );
 };
