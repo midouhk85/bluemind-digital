@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, Bot, User } from 'lucide-react';
-import chatbotIcon from '../assets/chatbot-icon.png';
+import { MessageSquare, X, Send, Bot, User } from 'lucide-react';
 
 const Chatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -61,10 +60,10 @@ const Chatbot = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsOpen(true)}
-                className={`fixed bottom-24 right-6 z-50 rounded-full shadow-lg shadow-accent/20 transition-all duration-300 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'
+                className={`fixed bottom-24 right-6 z-50 p-4 rounded-full shadow-lg shadow-accent/20 transition-all duration-300 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100 bg-gradient-to-r from-accent to-cyan-500 text-deepBlue'
                     }`}
             >
-                <img src={chatbotIcon} alt="Chatbot" className="w-16 h-16 drop-shadow-lg" />
+                <MessageSquare className="w-6 h-6" />
             </motion.button>
 
             {/* Chat Window */}
