@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import heroBackground from '../assets/hero-background.png';
-import heroIllustration from '../assets/hero-illustration.png';
+import heroIllustration from '../assets/hero-illustration-new.png';
 import ParticlesBackground from './ParticlesBackground';
 import TypingAnimation from './TypingAnimation';
 import MagneticButton from './MagneticButton';
@@ -39,13 +39,13 @@ const Hero = () => {
                 <ParticlesBackground />
 
                 {/* Hero Illustration - Visible on all screens with responsive positioning */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full md:w-3/4 lg:w-1/2 h-full pointer-events-none">
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full md:w-4/5 lg:w-2/3 h-full pointer-events-none">
                     <div
-                        className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-30 md:opacity-60 lg:opacity-95"
+                        className="absolute inset-0 bg-contain bg-no-repeat bg-center opacity-50 md:opacity-75 lg:opacity-100"
                         style={{
                             backgroundImage: `url(${heroIllustration})`,
-                            maskImage: 'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 15%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.2) 55%, transparent 75%)',
-                            WebkitMaskImage: 'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(0,0,0,1) 15%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0.2) 55%, transparent 75%)',
+                            maskImage: 'radial-gradient(ellipse 85% 75% at 50% 50%, rgba(0,0,0,1) 25%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,0.3) 65%, transparent 85%)',
+                            WebkitMaskImage: 'radial-gradient(ellipse 85% 75% at 50% 50%, rgba(0,0,0,1) 25%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,0.3) 65%, transparent 85%)',
                         }}
                     />
                 </div>
