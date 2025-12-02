@@ -4,15 +4,16 @@
   --font-sans: 'Montserrat', 'Inter', system-ui, sans-serif;
   --font-display: 'Oswald', system-ui, sans-serif;
 
-  /* SmartCloud Palette */
-  --color-primary: #0B0415;
-  --color-secondary: #1A1033;
-  --color-accent: #60fdfc;
-  --color-accentGlow: #60fdfc;
-  --color-accentBlue: #60fdfc;
-  --color-deepBlue: #0B0415;
+  /* Enhanced Vibrant Palette */
+  --color-primary: #0a0118;
+  --color-secondary: #1a0b2e;
+  --color-accent: #06b6d4;
+  --color-accentGlow: #22d3ee;
+  --color-accentBlue: #3b82f6;
+  --color-accentPurple: #8b5cf6;
+  --color-deepBlue: #0a0118;
   --color-textLight: #FFFFFF;
-  --color-textGray: #94A3B8;
+  --color-textGray: #cbd5e1;
 
   --animate-marquee: marquee 25s linear infinite;
   --animate-marquee2: marquee2 25s linear infinite;
@@ -75,12 +76,13 @@
 
 /* Global Overrides for Light Mode */
 :root.light {
-  --color-primary: #f8fafc;
-  --color-secondary: #ffffff;
+  --color-primary: #ffffff;
+  --color-secondary: #f8fafc;
   --color-deepBlue: #f1f5f9;
   --color-textLight: #0f172a;
-  --color-textGray: #475569;
-  --color-accent: #0891b2;
-  --color-accentGlow: #0e7490;
+  --color-textGray: #334155;
+  --color-accent: #06b6d4;
+  --color-accentGlow: #0891b2;
   --color-accentBlue: #2563eb;
+  --color-accentPurple: #7c3aed;
 }

@@ -45,9 +45,9 @@ const Header = () => {
                         <div className="relative">
                             <div className="absolute inset-0 bg-accent blur-md opacity-30 group-hover:opacity-50 transition-opacity" />
                             <img src={robotLogoLight} alt="BlueMind Robot" className="w-8 h-8 relative z-10 dark:hidden" />
-                            <img src={robotLogo} alt="BlueMind Robot" className="w-8 h-8 relative z-10 hidden dark:block drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
+                            <img src={robotLogo} alt="BlueMind Robot" className="w-8 h-8 relative z-10 hidden dark:block drop-shadow-[0_0_8px_rgba(6,182,212,0.5)]" />
                         </div>
-                        <span className="hidden sm:block text-xl font-bold text-black dark:text-textLight tracking-tight group-hover:text-accent transition-colors">
+                        <span className="text-lg sm:text-xl font-bold text-gray-900 dark:text-textLight tracking-tight group-hover:text-accent transition-colors">
                             BlueMind Digital
                         </span>
                     </a>
@@ -75,10 +75,12 @@ const Header = () => {
 
                     {/* Mobile Controls */}
                     <div className="md:hidden flex items-center gap-3">
+                        {/* Theme Toggle on Mobile */}
+                        <ThemeToggle />
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="p-2 text-white hover:text-accent transition-colors"
+                            className="p-2 text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent transition-colors"
                             aria-label="Toggle menu"
                         >
                             {isMobileMenuOpen ? (
@@ -110,7 +112,6 @@ const Header = () => {
                                         {link.name}
                                     </a>
                                 ))}
-                                <ThemeToggle />
                                 <button
                                     onClick={() => {
                                         setIsBookingOpen(true);
