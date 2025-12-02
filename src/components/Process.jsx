@@ -35,7 +35,7 @@ const steps = [
 
 const Process = () => {
     return (
-        <section className="py-20 bg-deepBlue relative overflow-hidden">
+        <section className="py-20 bg-gray-50 dark:bg-deepBlue relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 -left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
@@ -49,17 +49,17 @@ const Process = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
                         Notre <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cyan-400">Processus</span>
                     </h2>
-                    <p className="text-textLight/70 max-w-2xl mx-auto">
+                    <p className="text-textGray dark:text-textLight/70 max-w-2xl mx-auto">
                         De l'analyse initiale au déploiement à grande échelle, nous vous guidons à chaque étape de votre transformation digitale.
                     </p>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
                     {/* Connecting Line (Desktop) */}
-                    <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-accent/20 via-cyan-400/20 to-emerald-400/20 -z-10"></div>
+                    <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-gray-300 dark:from-accent/20 via-gray-300 dark:via-cyan-400/20 to-gray-300 dark:to-emerald-400/20 -z-10"></div>
 
                     {steps.map((step, index) => (
                         <motion.div
@@ -70,19 +70,19 @@ const Process = () => {
                             transition={{ delay: index * 0.2 }}
                             className="relative group"
                         >
-                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:border-accent/30 transition-all duration-300 h-full hover:-translate-y-2">
+                            <div className="bg-white dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 p-6 rounded-2xl hover:border-accent/30 transition-all duration-300 h-full hover:-translate-y-2 shadow-sm dark:shadow-none">
                                 <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center mb-6 shadow-lg shadow-accent/10 group-hover:scale-110 transition-transform duration-300`}>
-                                    <step.icon className="w-7 h-7 text-deepBlue" />
+                                    <step.icon className="w-7 h-7 text-white dark:text-deepBlue" />
                                 </div>
 
-                                <div className="absolute top-6 right-6 text-4xl font-bold text-white/5 select-none">
+                                <div className="absolute top-6 right-6 text-4xl font-bold text-gray-300 dark:text-white/5 select-none">
                                     0{step.id}
                                 </div>
 
-                                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
+                                <h3 className="text-xl font-bold mb-3 text-black dark:text-white group-hover:text-accent transition-colors">
                                     {step.title}
                                 </h3>
-                                <p className="text-textLight/70 text-sm leading-relaxed">
+                                <p className="text-textGray dark:text-textLight/70 text-sm leading-relaxed">
                                     {step.description}
                                 </p>
                             </div>

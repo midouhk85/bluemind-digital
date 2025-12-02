@@ -43,7 +43,7 @@ const Contact = () => {
     ];
 
     return (
-        <section id="contact" className="py-24 bg-primary relative overflow-hidden">
+        <section id="contact" className="py-24 bg-gray-50 dark:bg-primary relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute w-[600px] h-[600px] bg-accent/10 rounded-full blur-[100px] -top-48 -right-48" />
@@ -59,7 +59,7 @@ const Contact = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <span className="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">Contactez-nous</span>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display">Parlons de votre projet</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display text-black dark:text-white">Parlons de votre projet</h2>
                         <p className="text-textGray text-lg mb-12">
                             Prêt à transformer votre entreprise ? Notre équipe est là pour vous accompagner.
                         </p>
@@ -70,7 +70,7 @@ const Contact = () => {
                                     <Mail className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-lg mb-1 text-white">Email</h3>
+                                    <h3 className="font-bold text-lg mb-1 text-black dark:text-white">Email</h3>
                                     <p className="text-textGray group-hover:text-accent transition-colors">contact@bluemind.digital</p>
                                 </div>
                             </a>
@@ -80,7 +80,7 @@ const Contact = () => {
                                     <Phone className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-lg mb-1 text-white">Téléphone</h3>
+                                    <h3 className="font-bold text-lg mb-1 text-black dark:text-white">Téléphone</h3>
                                     <p className="text-textGray group-hover:text-accent transition-colors">+213 540 035 753</p>
                                 </div>
                             </a>
@@ -90,7 +90,7 @@ const Contact = () => {
                                     <MapPin className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-lg mb-1 text-white">Adresse</h3>
+                                    <h3 className="font-bold text-lg mb-1 text-black dark:text-white">Adresse</h3>
                                     <p className="text-textGray group-hover:text-accent transition-colors">Alger, Algérie</p>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@ const Contact = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-2xl"
+                        className="bg-gray-50 dark:bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-gray-200 dark:border-white/10 shadow-2xl"
                     >
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -141,7 +141,7 @@ const Contact = () => {
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
-                                        className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent focus:bg-white/5 transition-all text-white placeholder:text-white/20"
+                                        className="w-full bg-white dark:bg-black/20 border border-gray-300 dark:border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent focus:bg-white dark:focus:bg-white/5 transition-all text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-white/20"
                                         placeholder="Votre nom"
                                     />
                                 </div>
@@ -152,7 +152,7 @@ const Contact = () => {
                                         name="company"
                                         value={formData.company}
                                         onChange={handleChange}
-                                        className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent focus:bg-white/5 transition-all text-white placeholder:text-white/20"
+                                        className="w-full bg-white dark:bg-black/20 border border-gray-300 dark:border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent focus:bg-white dark:focus:bg-white/5 transition-all text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-white/20"
                                         placeholder="Votre entreprise"
                                     />
                                 </div>
@@ -166,7 +166,7 @@ const Contact = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent focus:bg-white/5 transition-all text-white placeholder:text-white/20"
+                                    className="w-full bg-white dark:bg-black/20 border border-gray-300 dark:border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent focus:bg-white dark:focus:bg-white/5 transition-all text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-white/20"
                                     placeholder="votre@email.com"
                                 />
                             </div>
@@ -179,14 +179,14 @@ const Contact = () => {
                                     value={formData.message}
                                     onChange={handleChange}
                                     required
-                                    className="w-full bg-black/20 border border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent focus:bg-white/5 transition-all text-white placeholder:text-white/20"
+                                    className="w-full bg-white dark:bg-black/20 border border-gray-300 dark:border-white/10 rounded-lg px-4 py-3 focus:outline-none focus:border-accent focus:bg-white dark:focus:bg-white/5 transition-all text-black dark:text-white placeholder:text-gray-500 dark:placeholder:text-white/20"
                                     placeholder="Parlez-nous de votre projet..."
                                 ></textarea>
                             </div>
 
                             <button
                                 type="submit"
-                                className="w-full bg-black/70 hover:bg-black/90 backdrop-blur-sm border border-accent/30 hover:border-accent text-accent py-4 rounded-lg transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg hover:shadow-accent/25 font-display"
+                                className="w-full py-4 bg-accent/10 hover:bg-accent/20 border border-accent/50 text-accent rounded-full transition-all hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] font-display tracking-wide flex items-center justify-center gap-2"
                             >
                                 Envoyer le message
                                 <Send className="w-5 h-5" />

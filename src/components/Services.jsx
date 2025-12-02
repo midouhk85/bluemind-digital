@@ -67,18 +67,18 @@ const ServiceCard = ({ service, index }) => {
                 transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
                 transition: 'transform 0.2s ease-out'
             }}
-            className="group relative p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:border-accent/50 transition-all duration-300 hover:scale-105 overflow-hidden"
+            className="group p-8 rounded-2xl bg-white dark:bg-white/5 border border-transparent dark:border-white/10 hover:bg-blue-50 dark:hover:bg-accent/5 hover:border-accent/30 transition-all duration-300 shadow-lg dark:shadow-none"
         >
             <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
 
             <div className="relative z-10">
-                <div className="mb-6 p-3 bg-white/5 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 text-accent shadow-[0_0_15px_rgba(139,92,246,0.2)] group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]">
+                <div className="mb-6 p-3 bg-gray-100 dark:bg-white/5 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 text-accent shadow-[0_0_15px_rgba(139,92,246,0.2)] group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]">
                     {service.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-accent transition-colors">
+                <h3 className="text-xl font-bold mb-3 text-black dark:text-white group-hover:text-accent transition-colors">
                     {service.title}
                 </h3>
-                <p className="text-textGray text-sm leading-relaxed group-hover:text-white/80 transition-colors">
+                <p className="text-textGray text-sm leading-relaxed group-hover:text-gray-900 dark:group-hover:text-white/80 transition-colors">
                     {service.description}
                 </p>
             </div>
@@ -98,7 +98,7 @@ const Services = () => {
                     className="text-center mb-16"
                 >
                     <LogoCarousel />
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 font-display">Nos Expertises</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 font-display text-black dark:text-white">Nos Expertises</h2>
                     <p className="text-textGray max-w-2xl mx-auto">
                         Des solutions technologiques de pointe pour propulser votre croissance.
                     </p>

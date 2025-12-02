@@ -6,18 +6,11 @@
 
   /* SmartCloud Palette */
   --color-primary: #0B0415;
-  /* Deep Violet Background */
   --color-secondary: #1A1033;
-  /* Lighter Violet for sections */
   --color-accent: #60fdfc;
-  /* Cyan Accent */
   --color-accentGlow: #60fdfc;
-  /* Cyan Glow */
   --color-accentBlue: #60fdfc;
-  /* Cyan Blue */
-
   --color-deepBlue: #0B0415;
-  /* Keeping variable name for compatibility but updating color */
   --color-textLight: #FFFFFF;
   --color-textGray: #94A3B8;
 
@@ -75,4 +68,19 @@
   .font-body {
     font-family: var(--font-sans);
   }
+}
+
+/* Force Class Strategy for Dark Mode in Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+/* Global Overrides for Light Mode */
+:root.light {
+  --color-primary: #f8fafc;
+  --color-secondary: #ffffff;
+  --color-deepBlue: #f1f5f9;
+  --color-textLight: #0f172a;
+  --color-textGray: #475569;
+  --color-accent: #0891b2;
+  --color-accentGlow: #0e7490;
+  --color-accentBlue: #2563eb;
 }

@@ -75,7 +75,7 @@ const logos = [
 
 const LogoCarousel = () => {
     return (
-        <div className="w-full py-12 overflow-hidden bg-deepBlue/50">
+        <div className="w-full py-12 overflow-hidden bg-gray-50 dark:bg-deepBlue/50">
             <div className="container mx-auto px-6 mb-8 text-center">
                 <p className="text-textGray text-sm uppercase tracking-widest">Outils maîtrisés</p>
             </div>
@@ -87,10 +87,10 @@ const LogoCarousel = () => {
                             key={index}
                             className="mx-8 flex flex-col items-center justify-center gap-4 opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer group/item"
                         >
-                            <div className="text-white group-hover/item:text-accent transition-colors duration-300 h-12 flex items-center justify-center">
+                            <div className="text-black dark:text-white group-hover/item:text-accent transition-colors duration-300 h-12 flex items-center justify-center">
                                 {logo.icon}
                             </div>
-                            <span className="text-xs font-medium text-textGray group-hover/item:text-white transition-colors duration-300">
+                            <span className="text-xs font-medium text-textGray group-hover/item:text-black dark:group-hover/item:text-white transition-colors duration-300">
                                 {logo.name}
                             </span>
                         </div>
@@ -103,10 +103,10 @@ const LogoCarousel = () => {
                             key={`clone-${index}`}
                             className="mx-8 flex flex-col items-center justify-center gap-4 opacity-50 hover:opacity-100 transition-opacity duration-300 cursor-pointer group/item"
                         >
-                            <div className="text-white group-hover/item:text-accent transition-colors duration-300 h-12 flex items-center justify-center">
+                            <div className="text-black dark:text-white group-hover/item:text-accent transition-colors duration-300 h-12 flex items-center justify-center">
                                 {logo.icon}
                             </div>
-                            <span className="text-xs font-medium text-textGray group-hover/item:text-white transition-colors duration-300">
+                            <span className="text-xs font-medium text-textGray group-hover/item:text-black dark:group-hover/item:text-white transition-colors duration-300">
                                 {logo.name}
                             </span>
                         </div>

@@ -12,7 +12,7 @@ const Hero = () => {
     const [isBookingOpen, setIsBookingOpen] = useState(false);
 
     return (
-        <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden bg-primary pt-24 pb-8">
+        <section className="relative min-h-[75vh] flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-primary pt-24 pb-8">
             {/* Dynamic Background */}
             <div className="absolute inset-0 overflow-hidden">
                 {/* Generated Background Image */}
@@ -26,7 +26,7 @@ const Hero = () => {
                 />
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/50 to-primary" />
+                <div className="absolute inset-0 bg-gradient-to-b from-white/80 dark:from-primary/80 via-white/50 dark:via-primary/50 to-white dark:to-primary" />
 
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.15),transparent_50%)]" />
                 <div className="absolute w-96 h-96 bg-accent/20 rounded-full blur-3xl -top-20 -left-20 animate-pulse-slow" />
@@ -62,7 +62,7 @@ const Hero = () => {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight font-display"
                         >
-                            <span className="block text-textLight mb-2">Automatisez aujourd'hui.</span>
+                            <span className="block text-gray-900 dark:text-textLight mb-2">Automatisez aujourd'hui.</span>
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent via-accentBlue to-accentGlow">
                                 <TypingAnimation
                                     texts={[
@@ -79,7 +79,8 @@ const Hero = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="text-lg md:text-xl text-textGray mb-8 md:mb-10 max-w-xl"
+                            className="text-lg md:text-xl text-textGray mb-8 md:mb-10 max-w-xl lg:bg-transparent bg-black/60 dark:bg-black/60 lg:p-0 p-4 rounded-xl backdrop-blur-sm"
+                            style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}
                         >
                             BlueMind Digital transforme votre entreprise grâce à l'intelligence artificielle et des solutions digitales sur mesure.
                         </motion.p>
@@ -93,14 +94,14 @@ const Hero = () => {
                             <MagneticButton className="w-full sm:w-auto flex">
                                 <button
                                     onClick={() => setIsBookingOpen(true)}
-                                    className="w-full px-8 py-4 bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-accent/30 hover:border-accent text-accent rounded-full transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(96,253,252,0.5)] flex items-center justify-center gap-2 font-display"
+                                    className="w-full px-8 py-4 bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-accent/30 hover:border-accent text-white rounded-full transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(96,253,252,0.5)] flex items-center justify-center gap-2 font-display"
                                 >
                                     Réserver un audit
                                     <ArrowRight className="w-5 h-5" />
                                 </button>
                             </MagneticButton>
                             <MagneticButton className="w-full sm:w-auto flex">
-                                <a href="#contact" className="w-full px-8 py-4 border border-white/10 hover:bg-white/5 text-textLight rounded-full transition-all backdrop-blur-sm text-center font-body">
+                                <a href="#contact" className="w-full px-8 py-4 bg-accent/10 hover:bg-accent/20 border border-accent/50 text-accent rounded-full transition-all text-center font-display shadow-[0_0_10px_rgba(34,211,238,0.1)] hover:shadow-[0_0_15px_rgba(34,211,238,0.3)]">
                                     Nous contacter
                                 </a>
                             </MagneticButton>

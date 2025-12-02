@@ -4,7 +4,7 @@ import clientLogos from '/client-logos.png';
 
 const Portfolio = () => {
     return (
-        <section id="portfolio" className="py-24 bg-primary relative overflow-hidden">
+        <section id="portfolio" className="py-24 bg-gray-50 dark:bg-primary relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl -top-24 -right-24" />
@@ -19,7 +19,7 @@ const Portfolio = () => {
                     className="text-center mb-16"
                 >
                     <span className="text-accent font-bold tracking-wider text-sm uppercase mb-2 block">Confiance & Excellence</span>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display">6 ans d'expertise</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display text-black dark:text-white">6 ans d'expertise</h2>
                     <p className="text-textGray max-w-2xl mx-auto">
                         Ils nous font confiance pour leur transformation digitale.
                     </p>

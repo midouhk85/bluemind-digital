@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, Lightbulb } from 'lucide-react';
 import bluemindFullLogo from '../assets/bluemind-full-logo-new.png';
+import bluemindFullLogoLight from '../assets/bluemind-full-logo-light.png';
 
 const values = [
     {
@@ -23,7 +24,7 @@ const values = [
 
 const About = () => {
     return (
-        <section id="about" className="py-24 bg-deepBlue relative overflow-hidden">
+        <section id="about" className="py-24 bg-gray-50 dark:bg-deepBlue relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-accent/5 to-transparent" />
 
@@ -35,7 +36,7 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6 font-display text-black dark:text-white">
                             Notre Histoire
                         </h2>
                         <p className="text-textGray text-lg mb-6 leading-relaxed">
@@ -53,10 +54,10 @@ const About = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                                    className="p-4 bg-secondary/30 rounded-xl border border-white/5 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1"
+                                    className="p-4 bg-white dark:bg-secondary/30 rounded-xl border border-gray-200 dark:border-white/5 hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 shadow-sm dark:shadow-none"
                                 >
                                     <div className="text-accent mb-3">{value.icon}</div>
-                                    <h3 className="font-bold mb-2 font-display">{value.title}</h3>
+                                    <h3 className="font-bold mb-2 font-display text-black dark:text-white">{value.title}</h3>
                                     <p className="text-sm text-textGray font-body">{value.description}</p>
                                 </motion.div>
                             ))}
@@ -73,12 +74,13 @@ const About = () => {
                         <div className="aspect-square rounded-2xl overflow-hidden bg-secondary/50 relative group">
                             <div className="absolute inset-0 bg-gradient-to-tr from-deepBlue/80 to-transparent z-10" />
                             {/* BlueMind Full Logo */}
-                            <div className="absolute inset-0 flex items-center justify-center bg-secondary p-8 md:p-12 pb-32 md:pb-32">
-                                <img src={bluemindFullLogo} alt="BlueMind Digital Team" className="w-full h-full object-contain" />
+                            <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-secondary p-8 md:p-12 pb-32 md:pb-32">
+                                <img src={bluemindFullLogoLight} alt="BlueMind Digital Team" className="w-full h-full object-contain dark:hidden" />
+                                <img src={bluemindFullLogo} alt="BlueMind Digital Team" className="w-full h-full object-contain hidden dark:block" />
                             </div>
 
                             <div className="absolute bottom-0 left-0 p-8 z-20">
-                                <h3 className="text-2xl font-bold text-white mb-2 font-display">L'Équipe BlueMind</h3>
+                                <h3 className="text-2xl font-bold text-black dark:text-white mb-2 font-display">L'Équipe BlueMind</h3>
                                 <p className="text-accent font-body">Experts en IA & Digital</p>
                             </div>
                         </div>
