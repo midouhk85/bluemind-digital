@@ -24,9 +24,10 @@ const values = [
 
 const About = () => {
     return (
-        <section id="about" className="py-24 bg-gray-50 dark:bg-deepBlue relative overflow-hidden">
+        <section id="about" className="py-24 bg-transparent relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-accent/5 to-transparent" />
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accentBlue/5 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 dark:hidden pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

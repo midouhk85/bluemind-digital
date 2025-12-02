@@ -88,7 +88,10 @@ const ServiceCard = ({ service, index }) => {
 
 const Services = () => {
     return (
-        <section id="services" className="py-8 bg-white dark:bg-primary relative overflow-hidden">
+        <section id="services" className="py-8 bg-transparent relative overflow-hidden">
+            {/* Ambient Glows for Light Mode */}
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 dark:hidden" />
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accentBlue/5 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2 dark:hidden" />
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

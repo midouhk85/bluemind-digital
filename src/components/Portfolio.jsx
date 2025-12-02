@@ -4,11 +4,12 @@ import clientLogos from '/client-logos.png';
 
 const Portfolio = () => {
     return (
-        <section id="portfolio" className="py-24 bg-gray-50 dark:bg-primary relative overflow-hidden">
+        <section id="portfolio" className="py-24 bg-transparent relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl -top-24 -right-24" />
                 <div className="absolute w-[500px] h-[500px] bg-accentBlue/5 rounded-full blur-3xl -bottom-24 -left-24" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accentGlow/5 rounded-full blur-[100px] dark:hidden" />
             </div>
             <div className="container mx-auto px-6">
                 <motion.div

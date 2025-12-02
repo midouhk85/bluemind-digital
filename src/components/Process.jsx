@@ -35,11 +35,13 @@ const steps = [
 
 const Process = () => {
     return (
-        <section className="py-20 bg-gray-50 dark:bg-deepBlue relative overflow-hidden">
+        <section className="py-20 bg-transparent relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 -left-20 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+                {/* Light Mode Specific Glows */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accentPurple/5 rounded-full blur-[120px] dark:hidden pointer-events-none" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">

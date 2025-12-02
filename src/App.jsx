@@ -26,7 +26,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="bg-gray-50 dark:bg-deepBlue min-h-screen text-black dark:text-textLight selection:bg-accent selection:text-deepBlue">
+      <div className="bg-primary dark:bg-deepBlue min-h-screen text-black dark:text-textLight selection:bg-accent selection:text-deepBlue light-bg-pattern">
         <AnimatePresence mode="wait">
           {isLoading && <LoadingScreen key="loader" />}
         </AnimatePresence>
