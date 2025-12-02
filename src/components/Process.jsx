@@ -8,28 +8,28 @@ const steps = [
         title: "Audit & Découverte",
         description: "Nous analysons vos flux de travail actuels et identifions les opportunités à fort impact pour l'automatisation par l'IA.",
         icon: Search,
-        color: "from-blue-400 to-cyan-400"
+        color: "from-accent to-accentBlue"
     },
     {
         id: 2,
         title: "Stratégie & Architecture",
         description: "Nous concevons une feuille de route IA personnalisée et une architecture technique adaptée à vos objectifs commerciaux.",
         icon: Cpu,
-        color: "from-cyan-400 to-teal-400"
+        color: "from-accentBlue to-accentPurple"
     },
     {
         id: 3,
         title: "Développement & Intégration",
         description: "Nos ingénieurs construisent et intègrent vos solutions IA, assurant une compatibilité transparente avec votre stack.",
         icon: Code,
-        color: "from-teal-400 to-emerald-400"
+        color: "from-accentPurple to-accent"
     },
     {
         id: 4,
         title: "Formation & Mise à l'échelle",
         description: "Nous formons votre équipe et surveillons les performances pour garantir que votre IA évolue efficacement avec votre croissance.",
         icon: Rocket,
-        color: "from-emerald-400 to-green-400"
+        color: "from-accent to-accentGlow"
     }
 ];
 
@@ -50,7 +50,7 @@ const Process = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
-                        Notre <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-cyan-400">Processus</span>
+                        Notre <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accentBlue to-accentPurple">Processus</span>
                     </h2>
                     <p className="text-textGray dark:text-textLight/70 max-w-2xl mx-auto">
                         De l'analyse initiale au déploiement à grande échelle, nous vous guidons à chaque étape de votre transformation digitale.

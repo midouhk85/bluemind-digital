@@ -186,7 +186,7 @@ const Contact = () => {
 
                             <button
                                 type="submit"
-                                className="w-full py-4 bg-accent/10 hover:bg-accent/20 border border-accent/50 text-accent rounded-full transition-all hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] font-display tracking-wide flex items-center justify-center gap-2"
+                                className="w-full py-4 bg-gradient-to-r from-accent to-accentBlue hover:from-accentBlue hover:to-accent text-white font-semibold rounded-full transition-all hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] font-display tracking-wide flex items-center justify-center gap-2"
                             >
                                 Envoyer le message
                                 <Send className="w-5 h-5" />

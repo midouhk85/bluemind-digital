@@ -14,19 +14,19 @@ const services = [
         icon: <BarChart3 className="w-8 h-8" />,
         title: "Social Ads",
         description: "Stratégies publicitaires performantes sur Meta, Google Ads, LinkedIn, TikTok et DV360.",
-        color: "from-accentBlue to-accentGlow"
+        color: "from-accentBlue to-accentPurple"
     },
     {
         icon: <Code2 className="w-8 h-8" />,
         title: "Développement SaaS & ERP",
         description: "Solutions logicielles sur mesure, robustes et évolutives pour votre entreprise.",
-        color: "from-accent to-accentGlow"
+        color: "from-accentPurple to-accent"
     },
     {
         icon: <BrainCircuit className="w-8 h-8" />,
         title: "Solutions IA",
         description: "Intégration d'intelligence artificielle pour automatiser et optimiser vos opérations.",
-        color: "from-accentGlow to-accent"
+        color: "from-accent to-accentGlow"
     }
 ];
 
@@ -67,12 +67,12 @@ const ServiceCard = ({ service, index }) => {
                 transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
                 transition: 'transform 0.2s ease-out'
             }}
-            className="group p-8 rounded-2xl bg-white dark:bg-white/5 border border-transparent dark:border-white/10 hover:bg-blue-50 dark:hover:bg-accent/5 hover:border-accent/30 transition-all duration-300 shadow-lg dark:shadow-none"
+            className="group p-8 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:bg-white hover:border-accent/50 dark:hover:bg-accent/5 dark:hover:border-accent/30 transition-all duration-300 shadow-md hover:shadow-xl dark:shadow-none"
         >
             <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
 
             <div className="relative z-10">
-                <div className="mb-6 p-3 bg-gray-100 dark:bg-white/5 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 text-accent shadow-[0_0_15px_rgba(139,92,246,0.2)] group-hover:shadow-[0_0_20px_rgba(139,92,246,0.4)]">
+                <div className="mb-6 p-3 bg-white dark:bg-white/5 rounded-xl w-fit group-hover:scale-110 transition-transform duration-300 text-accent shadow-md group-hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
                     {service.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-black dark:text-white group-hover:text-accent transition-colors">
@@ -88,7 +88,7 @@ const ServiceCard = ({ service, index }) => {
 
 const Services = () => {
     return (
-        <section id="services" className="py-8 bg-primary relative overflow-hidden">
+        <section id="services" className="py-8 bg-white dark:bg-primary relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
